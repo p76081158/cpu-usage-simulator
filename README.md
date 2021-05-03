@@ -1,2 +1,2 @@
 # cpu-usage-simulator
-Simulate cpu usage by ICMP packets
+Simulate cpu usage by HTTP packets
