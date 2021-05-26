@@ -13,7 +13,7 @@ var time = "5"
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, r.URL.Path)
-	input_cmd := "nohup stress-ng -c " + cpu + " -l " + load + " -t " + time
+	input_cmd := "stress-ng -c " + cpu + " -l " + load + " -t " + time
 	cmd := exec.Command("/bin/sh", "-c", input_cmd)
 	if err := cmd.Run(); err != nil {
 		fmt.Printf("Got error: %s\n", err.Error())
